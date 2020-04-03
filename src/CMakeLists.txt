@@ -6,6 +6,8 @@ if(MSVC)
   add_definitions( -D_CRT_SECURE_NO_DEPRECATE )
 endif()
 
+set(CMAKE_C_FLAGS "-Wall -O3")
+
 set(SRCS ctrans.c
          getdat.c
          heap.c
