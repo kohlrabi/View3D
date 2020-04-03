@@ -106,16 +106,16 @@ void summarizeStore(FILE *fp, TMPSTORE *s, I1 *name)
   } else {
     fprintf(fp,"Store Summary:\n");
   }
-  fprintf(fp,"\tStructure size: %d\n", s->size);
-  fprintf(fp,"\tStructures per block: %d\n", s->Nmax);
-  fprintf(fp,"\tNumber of blocks: %d\n", s->nblock);
-  fprintf(fp,"\tTotal number of structures allocated: %d\n",
+  fprintf(fp,"\tStructure size: %lu\n", s->size);
+  fprintf(fp,"\tStructures per block: %lu\n", s->Nmax);
+  fprintf(fp,"\tNumber of blocks: %lu\n", s->nblock);
+  fprintf(fp,"\tTotal number of structures allocated: %lu\n",
           s->Nmax * s->nblock);
-  fprintf(fp,"\tTotal size of of structures allocated: %d\n",
+  fprintf(fp,"\tTotal size of of structures allocated: %lu\n",
           s->Nmax * s->nblock * s->size);
-  fprintf(fp,"\tTotal number of structures returned: %d\n",
+  fprintf(fp,"\tTotal number of structures returned: %lu\n",
           s->Nmax * (s->nblock - 1) + s->n);
-  fprintf(fp,"\tTotal size of structures returned: %d\n",
+  fprintf(fp,"\tTotal size of structures returned: %lu\n",
           (s->Nmax * (s->nblock - 1) + s->n) * s->size);
   return;
 }
